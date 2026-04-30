@@ -105,7 +105,7 @@ export default function Home() {
               className="rounded-3xl border border-slate-700/50 bg-slate-900/80 p-5 shadow-[0_18px_45px_rgba(0,0,0,0.25)]"
             >
               <p className="text-sm font-medium text-slate-400">{metric.label}</p>
-              <p className="mt-4 text-3xl font-semibold tracking-tight text-slate-50">
+              <p className="mt-4 text-5xl font-semibold tracking-tight text-slate-50">
                 {metric.value}
               </p>
               <p className="mt-2 text-sm text-emerald-400">{metric.change}</p>
