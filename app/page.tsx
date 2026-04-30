@@ -61,7 +61,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.14),_transparent_28%),linear-gradient(180deg,_#0f172a_0%,_#172554_38%,_#eff4ff_38%,_#f3f6fb_100%)] px-4 py-6 text-slate-900 sm:px-6 lg:px-8">
+    <main className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.12),_transparent_32%),linear-gradient(180deg,_#0a0f1a_0%,_#0f172a_100%)] px-4 py-6 text-slate-100 sm:px-6 lg:px-8">
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-6">
         <section className="overflow-hidden rounded-[32px] border border-white/10 bg-slate-950 px-6 py-6 text-white shadow-[0_32px_80px_rgba(15,23,42,0.32)] sm:px-8 lg:px-10">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
@@ -102,37 +102,37 @@ export default function Home() {
           {metrics.map((metric) => (
             <article
               key={metric.label}
-              className="rounded-3xl border border-slate-200/80 bg-white p-5 shadow-[0_18px_45px_rgba(15,23,42,0.08)]"
+              className="rounded-3xl border border-slate-700/50 bg-slate-900/80 p-5 shadow-[0_18px_45px_rgba(0,0,0,0.25)]"
             >
-              <p className="text-sm font-medium text-slate-500">{metric.label}</p>
-              <p className="mt-4 text-3xl font-semibold tracking-tight text-slate-950">
+              <p className="text-sm font-medium text-slate-400">{metric.label}</p>
+              <p className="mt-4 text-5xl font-semibold tracking-tight text-slate-50">
                 {metric.value}
               </p>
-              <p className="mt-2 text-sm text-emerald-600">{metric.change}</p>
+              <p className="mt-2 text-sm text-emerald-400">{metric.change}</p>
             </article>
           ))}
         </section>
 
         <section className="grid gap-6 xl:grid-cols-[1.5fr_1fr]">
-          <article className="rounded-[28px] border border-slate-200/80 bg-white p-6 shadow-[0_18px_45px_rgba(15,23,42,0.08)]">
+          <article className="rounded-[28px] border border-slate-700/50 bg-slate-900/80 p-6 shadow-[0_18px_45px_rgba(0,0,0,0.25)]">
             <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
               <div>
-                <p className="text-sm font-medium text-sky-600">Revenue trend</p>
-                <h2 className="mt-1 text-2xl font-semibold tracking-tight text-slate-950">
+                <p className="text-sm font-medium text-sky-400">Revenue trend</p>
+                <h2 className="mt-1 text-2xl font-semibold tracking-tight text-slate-50">
                   Monthly performance is compounding.
                 </h2>
               </div>
-              <p className="text-sm text-slate-500">Jan to Dec</p>
+              <p className="text-sm text-slate-400">Jan to Dec</p>
             </div>
 
-            <div className="mt-8 flex h-72 items-end justify-between gap-2 rounded-3xl bg-slate-50 px-4 pb-4 pt-8">
+            <div className="mt-8 flex h-72 items-end justify-between gap-2 rounded-3xl bg-slate-800/60 px-4 pb-4 pt-8">
               {revenueBars.map((height, index) => (
                 <div key={index} className="flex flex-1 flex-col items-center justify-end gap-3">
                   <div
                     className="w-full rounded-t-2xl bg-gradient-to-t from-sky-500 via-cyan-400 to-emerald-300"
                     style={{ height: `${height}%` }}
                   />
-                  <span className="text-xs font-medium text-slate-400">
+                  <span className="text-xs font-medium text-slate-500">
                     {index + 1}
                   </span>
                 </div>
@@ -140,35 +140,35 @@ export default function Home() {
             </div>
 
             <div className="mt-6 grid gap-4 sm:grid-cols-3">
-              <div className="rounded-2xl bg-emerald-50 p-4">
-                <p className="text-sm text-emerald-700">ARR growth</p>
-                <p className="mt-2 text-2xl font-semibold text-emerald-950">+32%</p>
+              <div className="rounded-2xl bg-emerald-950/50 border border-emerald-800/40 p-4">
+                <p className="text-sm text-emerald-400">ARR growth</p>
+                <p className="mt-2 text-2xl font-semibold text-emerald-200">+32%</p>
               </div>
-              <div className="rounded-2xl bg-sky-50 p-4">
-                <p className="text-sm text-sky-700">Average sales cycle</p>
-                <p className="mt-2 text-2xl font-semibold text-sky-950">41 days</p>
+              <div className="rounded-2xl bg-sky-950/50 border border-sky-800/40 p-4">
+                <p className="text-sm text-sky-400">Average sales cycle</p>
+                <p className="mt-2 text-2xl font-semibold text-sky-200">41 days</p>
               </div>
-              <div className="rounded-2xl bg-violet-50 p-4">
-                <p className="text-sm text-violet-700">Expansion revenue</p>
-                <p className="mt-2 text-2xl font-semibold text-violet-950">$410K</p>
+              <div className="rounded-2xl bg-violet-950/50 border border-violet-800/40 p-4">
+                <p className="text-sm text-violet-400">Expansion revenue</p>
+                <p className="mt-2 text-2xl font-semibold text-violet-200">$410K</p>
               </div>
             </div>
           </article>
 
           <div className="grid gap-6">
-            <article className="rounded-[28px] border border-slate-200/80 bg-white p-6 shadow-[0_18px_45px_rgba(15,23,42,0.08)]">
-              <p className="text-sm font-medium text-slate-500">Pipeline status</p>
-              <h2 className="mt-1 text-2xl font-semibold tracking-tight text-slate-950">
+            <article className="rounded-[28px] border border-slate-700/50 bg-slate-900/80 p-6 shadow-[0_18px_45px_rgba(0,0,0,0.25)]">
+              <p className="text-sm font-medium text-slate-400">Pipeline status</p>
+              <h2 className="mt-1 text-2xl font-semibold tracking-tight text-slate-50">
                 Forecast confidence remains high.
               </h2>
               <div className="mt-6 space-y-5">
                 {pipeline.map((item) => (
                   <div key={item.stage}>
                     <div className="flex items-center justify-between text-sm">
-                      <span className="font-medium text-slate-700">{item.stage}</span>
-                      <span className="text-slate-500">{item.value}</span>
+                      <span className="font-medium text-slate-200">{item.stage}</span>
+                      <span className="text-slate-400">{item.value}</span>
                     </div>
-                    <div className="mt-2 h-3 rounded-full bg-slate-100">
+                    <div className="mt-2 h-3 rounded-full bg-slate-800">
                       <div
                         className="h-3 rounded-full bg-gradient-to-r from-sky-500 to-emerald-400"
                         style={{ width: item.width }}
@@ -179,13 +179,13 @@ export default function Home() {
               </div>
             </article>
 
-            <article className="rounded-[28px] border border-slate-200/80 bg-white p-6 shadow-[0_18px_45px_rgba(15,23,42,0.08)]">
-              <p className="text-sm font-medium text-slate-500">Top priorities</p>
+            <article className="rounded-[28px] border border-slate-700/50 bg-slate-900/80 p-6 shadow-[0_18px_45px_rgba(0,0,0,0.25)]">
+              <p className="text-sm font-medium text-slate-400">Top priorities</p>
               <div className="mt-5 space-y-4">
                 {initiatives.map((item) => (
-                  <div key={item.title} className="rounded-2xl bg-slate-50 p-4">
-                    <p className="font-semibold text-slate-900">{item.title}</p>
-                    <p className="mt-2 text-sm leading-6 text-slate-600">{item.detail}</p>
+                  <div key={item.title} className="rounded-2xl bg-slate-800/60 p-4">
+                    <p className="font-semibold text-slate-100">{item.title}</p>
+                    <p className="mt-2 text-sm leading-6 text-slate-400">{item.detail}</p>
                   </div>
                 ))}
               </div>
@@ -194,15 +194,15 @@ export default function Home() {
         </section>
 
         <section className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-          <article className="rounded-[28px] border border-slate-200/80 bg-white p-6 shadow-[0_18px_45px_rgba(15,23,42,0.08)]">
+          <article className="rounded-[28px] border border-slate-700/50 bg-slate-900/80 p-6 shadow-[0_18px_45px_rgba(0,0,0,0.25)]">
             <div className="flex items-center justify-between gap-4">
               <div>
-                <p className="text-sm font-medium text-slate-500">Regional performance</p>
-                <h2 className="mt-1 text-2xl font-semibold tracking-tight text-slate-950">
+                <p className="text-sm font-medium text-slate-400">Regional performance</p>
+                <h2 className="mt-1 text-2xl font-semibold tracking-tight text-slate-50">
                   Balanced growth across core markets.
                 </h2>
               </div>
-              <div className="rounded-full bg-slate-100 px-4 py-2 text-sm font-medium text-slate-600">
+              <div className="rounded-full bg-slate-800 px-4 py-2 text-sm font-medium text-slate-300">
                 Updated 8 mins ago
               </div>
             </div>
@@ -211,36 +211,36 @@ export default function Home() {
               {regions.map((region) => (
                 <div
                   key={region.name}
-                  className="grid gap-3 rounded-2xl border border-slate-200 p-4 sm:grid-cols-[1fr_auto_auto] sm:items-center"
+                  className="grid gap-3 rounded-2xl border border-slate-700/50 bg-slate-800/40 p-4 sm:grid-cols-[1fr_auto_auto] sm:items-center"
                 >
                   <div>
-                    <p className="font-semibold text-slate-900">{region.name}</p>
-                    <p className="text-sm text-slate-500">Revenue contribution</p>
+                    <p className="font-semibold text-slate-100">{region.name}</p>
+                    <p className="text-sm text-slate-400">Revenue contribution</p>
                   </div>
-                  <p className="text-lg font-semibold text-slate-950">{region.revenue}</p>
-                  <p className="text-sm font-medium text-emerald-600">{region.growth}</p>
+                  <p className="text-lg font-semibold text-slate-50">{region.revenue}</p>
+                  <p className="text-sm font-medium text-emerald-400">{region.growth}</p>
                 </div>
               ))}
             </div>
           </article>
 
-          <article className="rounded-[28px] border border-slate-200/80 bg-white p-6 shadow-[0_18px_45px_rgba(15,23,42,0.08)]">
-            <p className="text-sm font-medium text-slate-500">Executive notes</p>
-            <h2 className="mt-1 text-2xl font-semibold tracking-tight text-slate-950">
+          <article className="rounded-[28px] border border-slate-700/50 bg-slate-900/80 p-6 shadow-[0_18px_45px_rgba(0,0,0,0.25)]">
+            <p className="text-sm font-medium text-slate-400">Executive notes</p>
+            <h2 className="mt-1 text-2xl font-semibold tracking-tight text-slate-50">
               Recent movement across the business.
             </h2>
             <div className="mt-6 space-y-3">
               {activity.map((item) => (
-                <div key={item} className="flex gap-3 rounded-2xl bg-slate-50 p-4">
-                  <div className="mt-1 h-2.5 w-2.5 rounded-full bg-sky-500" />
-                  <p className="text-sm leading-6 text-slate-600">{item}</p>
+                <div key={item} className="flex gap-3 rounded-2xl bg-slate-800/60 p-4">
+                  <div className="mt-1 h-2.5 w-2.5 rounded-full bg-sky-400" />
+                  <p className="text-sm leading-6 text-slate-300">{item}</p>
                 </div>
               ))}
             </div>
 
-            <div className="mt-6 rounded-3xl bg-slate-950 p-5 text-white">
+            <div className="mt-6 rounded-3xl bg-slate-800 border border-slate-700/50 p-5 text-white">
               <p className="text-sm text-slate-400">CEO outlook</p>
-              <p className="mt-3 text-lg leading-8 text-slate-100">
+              <p className="mt-3 text-lg leading-8 text-slate-200">
                 The company is growing efficiently, but next-quarter execution depends on protecting gross margin while keeping enterprise expansion velocity high.
               </p>
             </div>
